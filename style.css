@@ -1,0 +1,81 @@
+#welcome {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: blueviolet;
+    margin-top: 250px;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: blueviolet;
+    margin-top: 250px;
+}
+
+#viewScore {
+
+}
+
+#restart {
+    
+}
+
+a.correct {
+
+}
+
+div.name_form {
+    display: block;
+    text-align: center;
+}
+
+
+#enter_name {
+    width: 400px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+
+}
+
+#begin_quiz {
+    background-color: blueviolet;
+}
+
+#scoreboard {
+    display: block;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+a.navButton {
+    background-color: blueviolet;
+}
+
+p.questionText {
+    font-size: large;
+}
+
+.quizQuestion {
+    display: block;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+a.response {
+    background-color: blueviolet;
+    width: 100%;
+}
+
+div.quizAnswers {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
