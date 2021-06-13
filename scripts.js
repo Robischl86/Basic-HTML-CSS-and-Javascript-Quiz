@@ -8,14 +8,28 @@ const correct = document.getElementsByClassName("correct");
 
 
 
-
-
+points = 0;
+localStorage.setItem("points", points);
 
 
 function correctAnswer() {
-    points++;
-    return points;
-  }
+localStorage.getItem(points);
+points++;
+return points;
+}
+
+
+
+console.log(points);
+
+function restartQuiz() {
+localStorage.clear();
+}
+
+
+
+
+
 
 
 
