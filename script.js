@@ -16,7 +16,7 @@ nextButton.addEventListener('click', () => {
 function startGame() {
     welcome.classList.add('hide');
     score = 0;
-    document.getElementById('score').innerHTML = score;
+    document.getElementById('score').innerHTML = "Score: " + score;;
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
@@ -62,19 +62,18 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide');
     } else {
         welcome.classList.remove('hide');
-        if (score > 3) {
-            welcome.innerText = "Congratulations! You passed!";
+        if (score > 6) {
+            welcome.innerText = "Your score is " + score + "/10! Congratulations! You passed!";
         }   else {
-            welcome.innerText = "Sorry! You failed!";
+            welcome.innerText = "Your score is " + score + "/10. Sorry! You failed!";
         }
         startButton.innerText = "Restart";
         startButton.classList.remove('hide');
     }
     if (selectedButton.dataset = correct) {
         score++;
-        console.log(score);
     }
-    document.getElementById('score').innerHTML = score;
+    document.getElementById('score').innerHTML = "Score: " + score;
 }
 
 function setStatusClass(element, correct) {
@@ -93,46 +92,92 @@ function clearStatusClass(element) {
 
 const questions = [
     {
-        question: 'What is 2 + 2?',
+        question: 'Inside which HTML element do we put the JavaScript?',
         answers: [
-            { text: '4', correct: true},
-            { text: '22', correct: false},
+            { text: '<script>', correct: true},
+            { text: '<js>', correct: false},
+            { text: '<scripting>', correct: false},
+            { text: '<javascript>', correct: false},
         ]
     },
     {
-        question: 'What is your name?',
+        question: 'What does CSS stand for?',
         answers: [
-            { text: 'John', correct: false},
-            { text: 'Levi', correct: true},
-            { text: 'Jacob', correct: false},
-            { text: 'Marley', correct: false},
+            { text: 'Creative Style Sheets', correct: false},
+            { text: 'Cascading Style Sheets', correct: true},
+            { text: 'Colorful Style Sheets', correct: false},
+            { text: 'Computer Style Sheets', correct: false},
         ]
     },
     {
-        question: 'What is your quest?',
+        question: 'Where in an HTML document is the correct place to refer to an external style sheet?',
         answers: [
-            { text: 'To reclaim the Iron Throne', correct: false},
-            { text: 'To seek the Holy Grail', correct: true},
-            { text: 'To defeat the Blight', correct: false},
-            { text: 'To cast the One Ring into the fires of Mt. Doom', correct: false},
+            { text: 'In the <head> section', correct: true},
+            { text: 'In the <body> section', correct: false},
+            { text: 'At the end of the document', correct: false},
         ]
     },
     {
-        question: 'What is your favorite color?',
+        question: 'How do you select all p elements inside a div element??',
         answers: [
-            { text: 'Black', correct: false},
-            { text: 'Red', correct: false},
-            { text: 'Green', correct: true},
-            { text: 'Blue', correct: false},
+            { text: 'div + p', correct: false},
+            { text: 'div/p', correct: false},
+            { text: 'div.p', correct: true},
+            { text: 'div p', correct: false},
         ]
     },
     {
-        question: 'What is the capital of Assyria?',
+        question: 'Which operator is used to assign a value to a variable?',
         answers: [
-            { text: 'Assur', correct: true},
-            { text: 'Constantinople', correct: false},
-            { text: 'Baghdad', correct: false},
-            { text: 'Cairo', correct: false},
+            { text: '=', correct: true},
+            { text: 'x', correct: false},
+            { text: '*', correct: false},
+            { text: '-', correct: false},
+        ]
+    },
+    {
+        question: 'How do you write "Hello World" in an alert box?',
+        answers: [
+            { text: 'msgBox("Hello World");', correct: false},
+            { text: 'alert("Hello World");', correct: true},
+            { text: 'msg("Hello World");', correct: false},
+            { text: 'alertBox("Hello World");', correct: false},
+        ]
+    },
+    {
+        question: 'Which CSS property controls the text size?',
+        answers: [
+            { text: 'font-style', correct: false},
+            { text: 'font-size', correct: true},
+            { text: 'text-style', correct: false},
+            { text: 'text-size', correct: false},
+        ]
+    },
+    {
+        question: 'How do you make each word in a text start with a capital letter?',
+        answers: [
+            { text: 'text-style:capitalize', correct: false},
+            { text: "You can't do that with CSS", correct: false},
+            { text: 'transform:capitalize', correct: false},
+            { text: 'text-transform:capitalize', correct: true},
+        ]
+    },
+    {
+        question: 'How do you make each word in a text start with a capital letter?',
+        answers: [
+            { text: 'text-style:capitalize', correct: false},
+            { text: "You can't do that with CSS", correct: false},
+            { text: 'transform:capitalize', correct: false},
+            { text: 'text-transform:capitalize', correct: true},
+        ]
+    },
+    {
+        question: 'Choose the correct HTML element to define important text',
+        answers: [
+            { text: '<b>', correct: false},
+            { text: "<i>", correct: false},
+            { text: '<strong>', correct: true},
+            { text: '<important>', correct: false},
         ]
     },
 ]
