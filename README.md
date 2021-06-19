@@ -10,7 +10,7 @@ This project was created by Robischl86
  7. [Tests](#tests) 
  8. [Questions](#questions) 
 ## Description
-This is an html and Javascript quiz app that uses css styling. When activated the page will welcome the user and prompt them too begin the quiz. The user will be provided a series of questions with up to four multiple-choice answers. The user's score will be tracked throughout the quiz.
+This is an html and Javascript quiz app that uses css styling. When activated the page will welcome the user and prompt them too begin the quiz. The user will be provided a series of questions with up to four multiple-choice answers. The user's score will be tracked throughout the quiz. [Link](https://robischl86.github.io/Basic-HTML-CSS-and-Javascript-Quiz/)
 ## Screenshot
 ![Screenshot](screenshot.png?raw=true) 
 ## Installation
