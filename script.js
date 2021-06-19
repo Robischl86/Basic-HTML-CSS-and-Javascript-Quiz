@@ -58,6 +58,9 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     });
+    if (selectedButton.dataset = correct) {
+        score++;
+    }
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
@@ -69,9 +72,6 @@ function selectAnswer(e) {
         }
         startButton.innerText = "Restart";
         startButton.classList.remove('hide');
-    }
-    if (selectedButton.dataset = correct) {
-        score++;
     }
     document.getElementById('score').innerHTML = "Score: " + score;
 }
